@@ -1,0 +1,61 @@
+@import "tailwindcss";
+
+@theme {
+  /* Matteo's Brew Color Palette - Warm Earthy Tones */
+  --color-cream: #FDF6EE;
+  --color-cream-dark: #F5E6D3;
+  --color-sand: #E8D5BC;
+  --color-caramel: #D4A574;
+  --color-amber: #C68B59;
+  --color-coffee: #8B6042;
+  --color-espresso: #5C3A1E;
+  --color-dark-roast: #3D2414;
+  --color-mocha: #2C1810;
+
+  --font-heading: 'Playfair Display', serif;
+  --font-body: 'Inter', sans-serif;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: var(--color-cream);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--color-caramel);
+  border-radius: 4px;
+}
+
+/* Hide scrollbar for sliders */
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* Smooth scroll */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Safe area for notched phones */
+.pb-safe {
+  padding-bottom: env(safe-area-inset-bottom, 16px);
+}
+
+/* Tap highlight removal for mobile */
+@media (hover: none) {
+  button, a {
+    -webkit-tap-highlight-color: transparent;
+  }
+}
+
+body {
+  font-family: var(--font-body);
+  background-color: var(--color-cream);
+  color: var(--color-mocha);
+}
